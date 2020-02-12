@@ -51,7 +51,7 @@ public class Parking {
         return this.listImmatriculations;
     }
 
-    
+
     public boolean enterParking(String immat) {
 
         if (this.capaciteMax == this.listImmatricutationsPresentes.size()){
@@ -60,6 +60,7 @@ public class Parking {
         else{
             
             if (this.listImmatriculations.contains(immat)) {
+                this.listImmatricutationsPresentes.add(immat);
                 return true;
             }
             else {
@@ -67,6 +68,10 @@ public class Parking {
             }
 
         }
+
+    }
+
+    public boolean quitParking(String immat){
 
     }
 
