@@ -81,4 +81,9 @@ public class Parking {
         }
     }
 
+
+    public boolean isInParking(String immat){
+        return this.listImmatricutationsPresentes.contains(immat);
+    }
+
 }
