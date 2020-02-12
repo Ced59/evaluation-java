@@ -12,5 +12,9 @@ public class Hotel {
     private int nbreChbres;
 
 
-    
+    public Hotel(String nom, int nbreChbres, int nbreEtages) {
+        this.nom = nom;
+        this.nbreChbres = nbreChbres;
+        
+    }
 }
