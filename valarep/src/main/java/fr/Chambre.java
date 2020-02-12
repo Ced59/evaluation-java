@@ -48,6 +48,22 @@ public class Chambre {
             this.nomOccupant = null;
         }
     }
+
+    public String toString(){
+        String texte;
+        String statut;
+        if (this.nomOccupant != null){
+            statut = "louée";
+        }
+        else {
+            statut = "libre";
+        }
+
+        texte = "Chambre " + this.noChbre + ":" + this.type + " - " + statut;
+
+
+        return texte;
+    }
     
 }
 
