@@ -72,7 +72,13 @@ public class Parking {
     }
 
     public boolean quitParking(String immat){
-
+        if (!this.listImmatricutationsPresentes.contains(immat)){
+            return false;
+        }
+        else {
+            this.listImmatricutationsPresentes.remove(immat);
+            return true;
+        }
     }
 
 }
