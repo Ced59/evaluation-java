@@ -86,4 +86,13 @@ public class Parking {
         return this.listImmatricutationsPresentes.contains(immat);
     }
 
+    public boolean isFullParking(){
+        if (this.capaciteMax == this.listImmatricutationsPresentes.size()){
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+
 }
