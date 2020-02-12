@@ -95,4 +95,8 @@ public class Parking {
         }
     }
 
+    public int nbreVehiculeInParking(){
+        return this.listImmatricutationsPresentes.size();
+    }
+
 }
