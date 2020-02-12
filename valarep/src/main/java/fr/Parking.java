@@ -18,9 +18,7 @@ public class Parking {
 
 
 
-    public ArrayList<String> getListImmatriculations() {
-        return listImmatriculations;
-    }
+
 
     public void setListImmatriculations(ArrayList<String> listImmatriculations) {
         this.listImmatriculations = listImmatriculations;
@@ -99,6 +97,10 @@ public class Parking {
 
     public ArrayList<String> getListImmatricutationsPresentes() {
         return listImmatricutationsPresentes;
+    }
+
+    public ArrayList<String> getListImmatriculations() {
+        return listImmatriculations;
     }
 
 
