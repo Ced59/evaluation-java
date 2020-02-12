@@ -16,7 +16,7 @@ public class Parking {
     }
 
 
-    
+
 
     public ArrayList<String> getListImmatriculations() {
         return listImmatriculations;
@@ -42,19 +42,10 @@ public class Parking {
         this.capaciteMax = capaciteMax;
     }
 
+    public ArrayList<String> addAuthorizedImmatriculation(String immat) {
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+        this.listImmatriculations.add(immat);
+        return this.listImmatriculations;
+    }
 
 }
