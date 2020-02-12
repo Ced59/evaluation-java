@@ -115,4 +115,14 @@ public class Parking {
         }
     }
 
+    public void remplissageRate() {
+        double rate = (double)this.listImmatricutationsPresentes.size() / (double)this.capaciteMax * 100;
+        displayRemplissageRate(rate);
+
+    }
+
+    public void displayRemplissageRate(double rate) {
+        System.out.println("Le taux de remplissage est de " + rate + " %");
+    }
+
 }
