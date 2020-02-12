@@ -38,6 +38,16 @@ public class Chambre {
         }
         return check;
     }
+
+    public void jourSuivant(){
+        if (this.joursRestants >= 1){
+            this.joursRestants --;
+        }
+        
+        if (this.joursRestants == 0){
+            this.nomOccupant = null;
+        }
+    }
     
 }
 
