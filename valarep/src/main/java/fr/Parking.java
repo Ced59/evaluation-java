@@ -44,13 +44,15 @@ public class Parking {
 
     public ArrayList<String> addAuthorizedImmatriculation(String immat) {
 
-        this.listImmatriculations.add(immat);
+        if (!this.listImmatriculations.contains(immat)){
+            this.listImmatriculations.add(immat);
+        }
+        
         return this.listImmatriculations;
     }
 
+    
     public boolean enterParking(String immat) {
-
-        
 
         if (this.capaciteMax == this.listImmatricutationsPresentes.size()){
             return false;
