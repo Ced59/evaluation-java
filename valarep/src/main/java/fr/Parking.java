@@ -103,5 +103,10 @@ public class Parking {
         return listImmatriculations;
     }
 
+    public void displayImmatPresentes() {
+        for (String immat : this.listImmatricutationsPresentes) {
+            System.out.println(immat);
+        }
+    }
 
 }
