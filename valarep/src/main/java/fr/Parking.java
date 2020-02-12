@@ -109,4 +109,10 @@ public class Parking {
         }
     }
 
+    public void displayImmatAuthoriezd() {
+        for (String immat : this.listImmatriculations) {
+            System.out.println(immat);
+        }
+    }
+
 }
