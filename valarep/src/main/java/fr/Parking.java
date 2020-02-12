@@ -26,9 +26,7 @@ public class Parking {
         this.listImmatriculations = listImmatriculations;
     }
 
-    public ArrayList<String> getListImmatricutationsPresentes() {
-        return listImmatricutationsPresentes;
-    }
+
 
     public void setListImmatricutationsPresentes(ArrayList<String> listImmatricutationsPresentes) {
         this.listImmatricutationsPresentes = listImmatricutationsPresentes;
@@ -98,5 +96,10 @@ public class Parking {
     public int nbreVehiculeInParking(){
         return this.listImmatricutationsPresentes.size();
     }
+
+    public ArrayList<String> getListImmatricutationsPresentes() {
+        return listImmatricutationsPresentes;
+    }
+
 
 }
