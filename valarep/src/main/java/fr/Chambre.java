@@ -22,6 +22,22 @@ public class Chambre {
             this.type = "simple";
         }
     }
+
+
+    public boolean definirOccupant(String nomOccupant, int nbreJoursRestants){
+        boolean check = false;
+
+        if (this.nomOccupant == null)
+        {
+            check = true;
+            this.nomOccupant = nomOccupant;
+            this.joursRestants = nbreJoursRestants;
+        }
+        else {
+            check = false;
+        }
+        return check;
+    }
     
 }
 
