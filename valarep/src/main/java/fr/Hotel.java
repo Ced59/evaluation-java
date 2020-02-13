@@ -77,4 +77,8 @@ public class Hotel {
         }
         return (this.nbreChbres - nbreChambreLibres);
     }
+
+    public double tauxOccupation(){
+        return (double)nbreChambresOccupees()/(double)this.nbreChbres * 100);
+    }
 }
