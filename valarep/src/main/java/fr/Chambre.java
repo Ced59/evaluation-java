@@ -15,7 +15,7 @@ public class Chambre {
         this.joursRestants = 0;
         this.nomOccupant = null;
         this.noChbre = noChbre;
-        if (type == "double" || type == "suite"){
+        if (type.equals("double") || type.equals("suite")){
             this.type = type;
         }
         else {

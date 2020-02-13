@@ -66,6 +66,7 @@ public class Hotel {
 
             }
         }
+        return chambres;
     }
 
     public int nbreChambresOccupees(){
