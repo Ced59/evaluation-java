@@ -67,4 +67,14 @@ public class Hotel {
             }
         }
     }
+
+    public int nbreChambresOccupees(){
+        int nbreChambreLibres = 0;
+        for (Chambre c : chambres){
+            if (c.getNomOccupant() == null){
+                nbreChambreLibres++;
+            }
+        }
+        return (this.nbreChbres - nbreChambreLibres);
+    }
 }

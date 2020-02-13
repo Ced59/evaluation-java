@@ -43,7 +43,7 @@ public class Chambre {
         if (this.joursRestants >= 1){
             this.joursRestants --;
         }
-        
+
         if (this.joursRestants == 0){
             this.nomOccupant = null;
         }
@@ -64,7 +64,39 @@ public class Chambre {
 
         return texte;
     }
-    
+
+
+    public int getNoChbre() {
+        return noChbre;
+    }
+
+    public void setNoChbre(int noChbre) {
+        this.noChbre = noChbre;
+    }
+
+    public int getJoursRestants() {
+        return joursRestants;
+    }
+
+    public void setJoursRestants(int joursRestants) {
+        this.joursRestants = joursRestants;
+    }
+
+    public String getNomOccupant() {
+        return nomOccupant;
+    }
+
+    public void setNomOccupant(String nomOccupant) {
+        this.nomOccupant = nomOccupant;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
 }
 
 
