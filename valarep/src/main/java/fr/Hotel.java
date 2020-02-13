@@ -92,4 +92,10 @@ public class Hotel {
         }
         return false;
     }
+
+    public void jourSuivant(){
+        for (Chambre c : this.chambres){
+            c.jourSuivant();
+        }
+    }
 }
