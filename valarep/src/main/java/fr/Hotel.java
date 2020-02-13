@@ -98,4 +98,24 @@ public class Hotel {
             c.jourSuivant();
         }
     }
+
+    public String toString(){
+        String texte = "";
+        String newLine = System.getProperty("line.separator");
+
+        texte = "Hôtel " + this.nom + " : " + this.tauxOccupation() + " % d'occupation. Voici la liste des chambres: " + newLine;
+
+        for (Chambre c : this.chambres){
+            String statut = "";
+            if (c.getNomOccupant() == null){
+                statut = "libre";
+            }
+            else {
+                statut = "louée";
+            }
+            texte += "Chamnbre " + c.getNoChbre() + " : " + c.getType() + " - " + statut + newLine;
+        }
+
+        return texte;
+    }
 }
