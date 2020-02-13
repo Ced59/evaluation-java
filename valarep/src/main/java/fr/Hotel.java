@@ -38,14 +38,14 @@ public class Hotel {
     public Hotel(String nom, int nbreChbres, int nbreEtages) {
         this.nom = nom;
         this.nbreChbres = nbreChbres;
-
+        this.chambres = new ArrayList<>();
         this.chambres = determineChambres(nbreChbres, nbreEtages);
     }
 
     private ArrayList<Chambre> determineChambres(int nbreChbres, int nbreEtages) {
         int noChbre;
         int nbreChbrePerEtage = nbreChbres / nbreEtages;
-        ArrayList<Chambre> chambres = new ArrayList<Chambre>();
+
 
         for (int i = 1; i <= nbreEtages; i++){
             for (int j = 0; j < nbreChbrePerEtage; j++){
