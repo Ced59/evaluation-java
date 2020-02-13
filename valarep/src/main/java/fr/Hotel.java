@@ -70,7 +70,7 @@ public class Hotel {
 
     public int nbreChambresOccupees(){
         int nbreChambreLibres = 0;
-        for (Chambre c : chambres){
+        for (Chambre c : this.chambres){
             if (c.getNomOccupant() == null){
                 nbreChambreLibres++;
             }
@@ -79,6 +79,17 @@ public class Hotel {
     }
 
     public double tauxOccupation(){
-        return (double)nbreChambresOccupees()/(double)this.nbreChbres * 100);
+        return ((double)nbreChambresOccupees()/(double)this.nbreChbres * 100);
+    }
+
+    public boolean louerChbre(String type, String nom, int nbreJours){
+
+        for (Chambre c : this.chambres){
+            if (c.getNomOccupant() == null && c.getType().equals(type)){
+                c.definirOccupant(nom, nbreJours);
+                return true;
+            }
+        }
+        return false;
     }
 }
