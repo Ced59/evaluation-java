@@ -100,10 +100,10 @@ public class Hotel {
     }
 
     public String toString(){
-        String texte = "";
+        StringBuilder texte = new StringBuilder();
         String newLine = System.getProperty("line.separator");
 
-        texte = "Hôtel " + this.nom + " : " + this.tauxOccupation() + " % d'occupation. Voici la liste des chambres: " + newLine;
+        texte = new StringBuilder("Hôtel " + this.nom + " : " + this.tauxOccupation() + " % d'occupation. Voici la liste des chambres: " + newLine);
 
         for (Chambre c : this.chambres){
             String statut = "";
@@ -113,9 +113,9 @@ public class Hotel {
             else {
                 statut = "louée";
             }
-            texte += "Chamnbre " + c.getNoChbre() + " : " + c.getType() + " - " + statut + newLine;
+            texte.append("Chamnbre ").append(c.getNoChbre()).append(" : ").append(c.getType()).append(" - ").append(statut).append(newLine);
         }
 
-        return texte;
+        return texte.toString();
     }
 }
