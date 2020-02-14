@@ -57,6 +57,11 @@ public class Hotel {
             System.exit(0);
         }
 
+        if (nbreChbres % nbreEtages != 0){
+            System.out.println("Le nombre de chambre doit être un multiple du nombre d'étages!");
+            System.exit(0);
+        }
+
         for (int i = 1; i <= nbreEtages; i++){
             for (int j = 0; j < nbreChbrePerEtage; j++){
                 if (j <10) {
