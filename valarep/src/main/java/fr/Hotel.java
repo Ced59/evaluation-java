@@ -49,7 +49,12 @@ public class Hotel {
 
         for (int i = 1; i <= nbreEtages; i++){
             for (int j = 0; j < nbreChbrePerEtage; j++){
-                noChbre = Integer.parseInt(i + "" + j);
+                if (j <10) {
+                    noChbre = Integer.parseInt(i + "0" + j);
+                } else {
+                    noChbre = Integer.parseInt(i + "" + j);
+                }
+
 
                 if (j < 4){
                     Chambre chambre = new Chambre(noChbre, "simple");
