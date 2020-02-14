@@ -44,8 +44,18 @@ public class Hotel {
 
     private ArrayList<Chambre> determineChambres(int nbreChbres, int nbreEtages) {
         int noChbre;
+
         int nbreChbrePerEtage = nbreChbres / nbreEtages;
 
+        if (nbreChbrePerEtage < 5){
+            System.out.println("Il vous faut minimum 5 chambres par étage!");
+            System.exit(0);
+        }
+
+        if (nbreChbrePerEtage >= 100){
+            System.out.println("Il ne doit pas y avoir plus de 100 chambres par étage!");
+            System.exit(0);
+        }
 
         for (int i = 1; i <= nbreEtages; i++){
             for (int j = 0; j < nbreChbrePerEtage; j++){

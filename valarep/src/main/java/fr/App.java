@@ -61,7 +61,7 @@ public final class App {
     }
 
     public static Hotel tauxOccupation_40_sur_200() {
-        Hotel h = new Hotel("Novotel", 200, 4);
+        Hotel h = new Hotel("Novotel", 200, 3);
 
         for (int i = 0; i < 40; i++) {
             h.getChambres().get(i).definirOccupant("Toto", 15);
