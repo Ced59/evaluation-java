@@ -37,6 +37,8 @@ public final class App {
         passeJoursEtAfficheEtatHotel(h, nbreJours);
         displayDetailsChbresOccupes(h);
 
+        h.louerChbre("double", "Homer", 20);
+
         nbreJours = 15;
         passeJoursEtAfficheEtatHotel(h, nbreJours);
         displayDetailsChbresOccupes(h);
