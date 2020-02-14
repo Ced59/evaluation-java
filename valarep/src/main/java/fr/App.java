@@ -14,42 +14,53 @@ public final class App {
         Hotel h = tauxOccupation_40_sur_200();
         System.out.println(h.toString());
 
-        boolean test = h.louerChbre("suite", "Caudron", 2);
+        h.louerChbre("suite", "Caudron", 2);
 
-        h.toString();
+        System.out.println(h.toString());
 
-        System.out.println(test);
+        
 
         h.getChambres().get(100).definirOccupant("Cedric", 2);
 
         
 
-        for (Chambre chambre : h.getChambres()){
-
-            chambre.toString();
-
-            if (chambre.getNomOccupant() != null){
-                System.out.println("Occupant chambre n°" + chambre.getNoChbre() + " Type: " + chambre.getType() + " : " + chambre.getNomOccupant());
-            }
-            
-        }
+        displayDetailsChbresOccupes(h);
 
        
         
         int nbreJours = 0;
         passeJoursEtAfficheEtatHotel(h, nbreJours);
 
-        nbreJours = 3;
+        nbreJours = 1;
         passeJoursEtAfficheEtatHotel(h, nbreJours);
+        displayDetailsChbresOccupes(h);
+
+        nbreJours = 2;
+        passeJoursEtAfficheEtatHotel(h, nbreJours);
+        displayDetailsChbresOccupes(h);
 
         nbreJours = 15;
         passeJoursEtAfficheEtatHotel(h, nbreJours);
+        displayDetailsChbresOccupes(h);
         
+    }
+
+    private static void displayDetailsChbresOccupes(Hotel h) {
+        for (Chambre chambre : h.getChambres()){
+
+            chambre.toString();
+
+            if (chambre.getNomOccupant() != null){
+                System.out.println("Occupant chambre n°" + chambre.getNoChbre() + " Type: " + chambre.getType() + " : "
+                 + chambre.getNomOccupant() + " pour " + chambre.getJoursRestants() + " jours encore.");
+            }
+            
+        }
     }
 
 
     private static void passeJoursEtAfficheEtatHotel(Hotel h, int nbreJours) {
-        for (int i = 1; i < nbreJours; i++){
+        for (int i = 0; i < nbreJours; i++){
             h.jourSuivant();
         }
 
@@ -62,7 +73,7 @@ public final class App {
     }
 
     public static Hotel tauxOccupation_40_sur_200() {
-        Hotel h = new Hotel("Novotel", 200, 3);
+        Hotel h = new Hotel("Novotel", 200, 4);
 
         for (int i = 0; i < 40; i++) {
             h.getChambres().get(i).definirOccupant("Toto", 15);

@@ -116,6 +116,7 @@ public class Hotel {
                 return true;
             }
         }
+        System.out.println("Il n'y a plus de chamnbre libre correspondant aux critères.");
         return false;
     }
 

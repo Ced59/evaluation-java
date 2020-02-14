@@ -32,6 +32,7 @@ public class Chambre {
             check = true;
             this.nomOccupant = nomOccupant;
             this.joursRestants = nbreJoursRestants;
+            System.out.println(nomOccupant + " a loué la chambre n° " + this.getNoChbre() + " pour " + nbreJoursRestants + " jours.");
         }
         else {
             check = false;
