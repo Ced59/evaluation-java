@@ -19,6 +19,6 @@ public class HotelTest {
             h.getChambres().get(i).definirOccupant("Toto", 15);
         }
 
-        assertEquals(20, h.tauxOccupation());
+        assertEquals(20.0, h.tauxOccupation());
     }
 }
