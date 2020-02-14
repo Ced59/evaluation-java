@@ -57,6 +57,7 @@ public final class App {
         System.out.println(nbreJours + " jours plus tard");
         System.out.println("Nombre de chambres de l'hotel: " + h.getNbreChbres());
         System.out.println("Nombre de chambres occupées de l'hotel: " + h.nbreChambresOccupees());
+        System.out.println("Nombre de chambres libres de l'hotel: " + h.nbreChambresLibres());
         System.out.println(h.tauxOccupation() + " % d'occupation de l'hotel.");
     }
 

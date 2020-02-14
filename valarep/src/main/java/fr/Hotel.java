@@ -94,6 +94,16 @@ public class Hotel {
         return (this.nbreChbres - nbreChambreLibres);
     }
 
+    public int nbreChambresLibres(){
+        int nbreChambreLibres = 0;
+        for (Chambre c : this.chambres){
+            if (c.getNomOccupant() == null){
+                nbreChambreLibres++;
+            }
+        }
+        return nbreChambreLibres;
+    }
+
     public double tauxOccupation(){
         return ((double)nbreChambresOccupees()/(double)this.nbreChbres * 100);
     }
