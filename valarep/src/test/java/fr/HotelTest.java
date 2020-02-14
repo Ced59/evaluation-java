@@ -19,6 +19,25 @@ public class HotelTest {
             h.getChambres().get(i).definirOccupant("Toto", 15);
         }
 
-        assertEquals(20.0, h.tauxOccupation());
+        assertEquals(20.0, h.tauxOccupation(), 1);
     }
+
+    @Test
+    public void tauxOccupation_200chambresOccupeesSur200_Retourne100Pourcent(){
+        Hotel h = new Hotel("Novotel", 200, 4);
+
+        for (int i = 0; i < 200; i++){
+            h.getChambres().get(i).definirOccupant("Toto", 15);
+        }
+
+        assertEquals(100.0, h.tauxOccupation(), 1);
+    }
+
+    @Test
+    public void nbreChambresOccupees_200_retourne200(){
+        Hotel h = new Hotel("Novotel", 200, 4);
+
+        assertEquals(200, h.getNbreChbres());
+    }
+
 }
