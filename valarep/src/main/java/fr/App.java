@@ -11,23 +11,21 @@ public final class App {
      */
     public static void main(String[] args) {
 
-        Hotel h = tauxOccupation_40_sur_200();
+        String nomHotel = "Novotel";
+        int nbreChbre = 200;
+        int nbreEtages = 4;
+
+        Hotel h = tauxOccupation_40_sur_200(nomHotel, nbreChbre, nbreEtages);
         System.out.println(h.toString());
 
         h.louerChbre("suite", "Caudron", 2);
 
         System.out.println(h.toString());
 
-        
-
-        h.getChambres().get(100).definirOccupant("Cedric", 2);
-
-        
+        h.getChambres().get(100).definirOccupant("Cedric", 2); 
 
         displayDetailsChbresOccupes(h);
-
-       
-        
+ 
         int nbreJours = 0;
         passeJoursEtAfficheEtatHotel(h, nbreJours);
 
@@ -72,8 +70,8 @@ public final class App {
         System.out.println(h.tauxOccupation() + " % d'occupation de l'hotel.");
     }
 
-    public static Hotel tauxOccupation_40_sur_200() {
-        Hotel h = new Hotel("Novotel", 200, 4);
+    public static Hotel tauxOccupation_40_sur_200(String nom, int nbreChbres, int nbreEtages) {
+        Hotel h = new Hotel(nom, nbreChbres, nbreEtages);
 
         for (int i = 0; i < 40; i++) {
             h.getChambres().get(i).definirOccupant("Toto", 15);
